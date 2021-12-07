@@ -1,0 +1,16 @@
+<div class="col-md-6">
+  <h2 class="text-center">To Do</h2>
+  <form>
+    <div class="form-group">
+      <label for="description">Description:</label>
+      <input [(ngModel)]="addToDo.description" placeholder="Description" name="description" class="form-control" id="description">
+    </div>
+
+    <div class="form-group">
+      <label for="TargetDate">Target Date: (MM/dd/yyyy HH:mm:ss)</label>
+      <input [(ngModel)]="addToDo.targetDate" placeholder="MM/dd/yyyy HH:mm:ss" name="targetDate" class="form-control" id="targetDate">
+    </div>
+  
+    <button class="btn btn-success" (click)="addToDoDetail()">Add</button>
+  </form>
+  </div>

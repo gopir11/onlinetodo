@@ -1,0 +1,17 @@
+<header>
+  <nav class ="navbar navbar-expand-md navbar-dark bg-dark">
+  <div><a href="" class="navbar-brand">Online To Do</a></div>
+  
+  <ul class="navbar-nav">
+    <li><a *ngIf="loginService.isUserLoggedIn()" routerLink="/" class="nav-link">View ToDos</a></li>
+    <li><a *ngIf="loginService.isUserLoggedIn()" routerLink="/addToDo" class="nav-link">Add To Do</a></li>
+    <li><a *ngIf="!loginService.isUserLoggedIn()" routerLink="/addUser" class="nav-link">Signup</a></li>
+    <li><a *ngIf="!loginService.isUserLoggedIn()" routerLink="/login" class="nav-link">Login</a></li>
+    <li><a *ngIf="loginService.isUserLoggedIn()" routerLink="/logout" class="nav-link">LogOut</a></li>
+  
+  
+  </ul>
+  
+  </nav>
+  
+  </header>

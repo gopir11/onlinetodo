@@ -1,7 +1,6 @@
 package com.todo.app.service.impl;
 
 import com.todo.app.config.security.JwtTokenUtil;
-import com.todo.app.config.security.JwtUserDetailsService;
 import com.todo.app.dto.LoginRequest;
 import com.todo.app.dto.LoginResponse;
 import com.todo.app.dto.UserSignupRequest;
@@ -30,17 +29,14 @@ public class UserServiceImpl implements UserService {
     private final PasswordEncoder passwordEncoder;
     private final AuthenticationManager authenticationManager;
     private final JwtTokenUtil jwtTokenUtil;
-    private final JwtUserDetailsService jwtUserDetailsService;
 
     @Autowired
     public UserServiceImpl(UserRepository userRepository, PasswordEncoder passwordEncoder,
-                           AuthenticationManager authenticationManager, JwtTokenUtil jwtTokenUtil,
-                           JwtUserDetailsService jwtUserDetailsService) {
+                           AuthenticationManager authenticationManager, JwtTokenUtil jwtTokenUtil) {
         this.userRepository = userRepository;
         this.passwordEncoder = passwordEncoder;
         this.authenticationManager = authenticationManager;
         this.jwtTokenUtil = jwtTokenUtil;
-        this.jwtUserDetailsService = jwtUserDetailsService;
     }
 
     /**

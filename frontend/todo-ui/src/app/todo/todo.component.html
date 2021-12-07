@@ -1,0 +1,18 @@
+<div class="col-md-6">
+  <table class="table table-striped">
+  <thead>
+  <tr>
+    <th>Description</th>
+    <th>Target Date</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let todo of todos">
+          <td>{{todo.description}}</td>
+          <td>{{todo.targetDate}}</td>
+          <td><button class="btn btn-danger" (click)="deleteTodo(todo)"> Delete</button></td>
+          </tr>
+  </tbody>
+    </table>
+
+  </div>
